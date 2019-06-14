@@ -45,19 +45,28 @@ TagSelectItem.defaultProps = {
   itemStyle: null,
   itemStyleSelected: null,
   itemLabelStyle: null,
-  itemLabelStyleSelected: null
+  itemLabelStyleSelected: null,
+  itemContainer: {
+    marginBottom: 10,
+    marginRight: 10
+  },
+  inner: {
+    padding: 10,
+    borderWidth: 1,
+    borderRadius: 6
+  }
 }
 
 function TagSelectItem (props) {
   return (
-    <View style={styles.container}>
+    <View style={props.itemContainer}>
       <TouchableOpacity
         onPress={props.onPress}
         activeOpacity={props.activeOpacity}
       >
         <View
           style={[
-            styles.inner,
+            props.inner,
             styles[`${props.theme}Inner`],
             props.itemStyle,
             props.selected && styles[`${props.theme}InnerSelected`],
@@ -82,15 +91,6 @@ function TagSelectItem (props) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 10,
-    marginRight: 10
-  },
-  inner: {
-    padding: 10,
-    borderWidth: 1,
-    borderRadius: 6
-  },
   defaultInner: {
     backgroundColor: '#f8f9fa',
     borderColor: '#f8f9fa'
