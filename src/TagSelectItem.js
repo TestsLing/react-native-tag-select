@@ -32,7 +32,9 @@ TagSelectItem.propTypes = {
   itemStyle: ViewPropTypes.style,
   itemStyleSelected: ViewPropTypes.style,
   itemLabelStyle: PropTypes.any,
-  itemLabelStyleSelected: PropTypes.any
+  itemLabelStyleSelected: PropTypes.any,
+  itemContainer: PropTypes.any,
+  inner: PropTypes.any,
 }
 
 TagSelectItem.defaultProps = {
