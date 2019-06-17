@@ -83,6 +83,13 @@ class TagSelect extends React.Component {
   }
 
   /**
+   * clear all selected
+   */
+  clearSelected = () => {
+    this.setState({value:{}})
+  }
+
+  /**
    * @description Callback after select an item
    * @param {Object} item
    * @return {Void}
