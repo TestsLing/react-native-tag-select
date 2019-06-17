@@ -85,7 +85,7 @@ class TagSelect extends React.Component {
   /**
    * clear all selected
    */
-  get clearSelected () {
+  clearSelected = () => {
     this.setState({value:{}})
   }
 
