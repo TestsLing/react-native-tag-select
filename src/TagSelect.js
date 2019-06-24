@@ -60,6 +60,15 @@ class TagSelect extends React.Component {
     this.setState({ value })
   }
 
+  componentWillReceiveProps(nextProps){
+    const value = {}
+    nextProps.value.forEach((val) => {
+      value[val[[this.props.keyAttr]] || val] = val
+    })
+
+    this.setState({ value })
+  }
+
   /**
    * @description Return the number of items selected
    * @return {Number}
